@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>JOSM Presets files option</title>
+
+    <script type="text/javascript" src="css/select2.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="css/select2.css">
+    <meta name="description" content="Help page for the HOT exports tool">
+    <meta name="author" content="Humanitarian OpenStreetMap Team">
+</head>
+<body>
+<div id="wrapper">
+
+    <div id="header" style="background-image: url(img/Red-header.jpg);">
+        <div class="logo">
+            <!--<img src="img/hot-sml-logo.png" class="logo">-->
+            <h1>JOSM Presets files option</h1>
+        </div>
+        <div class="nav">
+                <!--<a href="http://export.hotosm.org/en">Home</a>-->
+                <!--<a href="http://export.hotosm.org/en/help">Help</a>-->
+                <!--<a href="http://export.hotosm.org/en/jobs">Jobs</a>-->
+
+                <!--<a href="http://export.hotosm.org/en/wizard_area">New Job</a>-->
+        </div>
+    </div>
+
+    <div id="content">
+
+        <h2>Learning Objectives</h2>
+        <p>
+            <ul>
+                <li>
+                    Understand tags
+                </li>
+                <li>
+                    Understand Keys and Values
+                </li>
+                <li>
+                    Understand JOSM preset files
+                </li>
+            </ul>
+        </p>
+
+        <h2>About</h2>
+
+        <p class="center-class">
+            After you draw/map an object in JOSM you need to add information to this object to describe what it is. You can
+            add attributes to a point, line or shape by attaching tags to it. We are going to use in this tutorial the JOSM Presets
+            menu so we can easily attach the correct tags to an object. The JOSM <em class="guilabel">Presets</em> menu gives you a way to find the object you want
+            to create and fill the information (tags) in a form.
+        </p>
+
+        <h3>Introduction to Tags and Presets</h3>
+
+        <p class="center-class">
+            We have an object drawn in JOSM and now we need to add tags to describe what it is, its name, and many other attributes.
+            For example we have created a supermarket store with the name "My Supermarket Store", we need two tags for it:
+            <ul>
+                <li>
+                    to describe the point as a grocery store
+                </li>
+                <li>
+                    to hold the name of the grocery store
+                </li>
+            </ul>
+            You can see the tags of an object in JOSM in the <em class="guilabel">Properties</em> panel.
+            <img class="home" src="img/prop_panel.png" alt="Properties Panel." title="JOSM Properties panel.">
+
+            <br>
+
+            Tags consists of two parts:
+            <ul>
+                <li>
+                    <em class="guilabel">key</em> = typically defines the type of information you are attaching
+                </li>
+                <li>
+                    <em class="guilabel">value</em> = defines the specific object
+                </li>
+            </ul>
+
+            <b>e.g.</b> for our supermarket example we have two tags, so two pairs of key and value
+            <ul>
+                <li><b>KEY = VALUE</b></li>
+                <li><b>name = Penny Market XXL</b></li>
+                <li><b>shop = supermarket</b></li>
+            </ul>
+            After we create a point with this tags, JOSM editor will display it like this:
+            <br>
+            <img class="home" src="img/josm_supermarket.png" alt="JOSM supermarket display." title="JOSM supermarket display.">
+            <br>
+            And, on the OpenStreetMap website the object looks like this:
+            <br>
+            <img class="home" src="img/osm_supermarket.png" alt="OSM web-browser supermarket display." title="OSM web-browser supermarket display.">
+            <br>
+            This works and it is displayed correctly because we have applied the correct tags. But, different mappers from different
+            parts of the world might disagree on how to tag common this. For example, it is important that all schools have the same
+            tag description. If some people tag schools as <b>amenity=school</b> and other people tag it as <b>education=school</b>, there
+            is a problem. So, to make everything consistent and give everyone an agreed standard on how to tag places there is a standard on
+            how to tag places and can be found on the <a href="http://wiki.openstreetmap.org/wiki/Map_Features"><em class="guilabel">Map Features</em></a> page on the OSM wiki
+
+            As you can see there are quite a lot of tags and their respective objects on the wiki page. It is unrealistically to think
+            that we can remember those all the time and going to the wiki page to check how is tagged a specific object might not be always
+            convenient. So, JOSM editor has a Presets menu that makes applying the correct tag much easier. With this menu we can find the option for
+            school, introduce the information in the form and be sure that we have tagged the building correctly. When we add tags using the presets menu
+            the correct tags are added to the object in the Presets Panel.
+
+            <br>
+        <img class="home" src="img/image913.png" alt="School presets file." title="School presets file.">
+            <br>
+        </p>
+
+        <h3>JOSM Preset options</h3>
+        <p>
+            JOSM comes preloaded with a presets menu that includes the most common types of geographic options. But sometimes those are not enough,
+            and you want to add additional presets. To do that, there are two options:
+            <ul>
+        <li>
+            create your own presets menu (write it in XML and then load it in JOSM)
+        </li>
+        <li>
+            load additional presets file for specific information that you might want to collect (in this situation you only need to load existing presets files, so no XML knowledge is required)
+        </li>
+            </ul>
+
+
+            We are going to further discuss how to load additional presets files into JOSM.
+            <ol>
+                <li>
+                    Open the <em class="guilabel">Preference</em> menu from JOSM, <em class="guilabel">Edit -> Preferences </em>
+                </li>
+                <li>
+                    Click on the <em class="guilabel">Map Settings</em> button, is the third button from top and looks like this:
+                    <br>
+                    <img class="home" src="img/menu_button.png" alt="Map Settings button." title="Map Settings button.">
+                    <br>
+                </li>
+                <li>
+                    Click on the third label named <em class="guilabel">Tagging Presets</em> (if it is the first time you do this it might take awhile
+                    to load all the existing presets option from OpenStreetMap)
+                </li>
+                <li>
+                    Select <em class="guilabel">Animal facilities by Viking81</em> and click the right arrow to add it to the active presets.
+                    <br>
+                    <img class="home" src="img/active_presets.png" alt="Active presets selected." title="Active presets selected.">
+                    <br>
+                </li>
+                <li>
+                    Click OK and restart JOSM.
+                </li>
+                <li>
+                    Create a new layer by going to <em class="guilabel">File -> New Layer</em>
+                </li>
+                <li>
+                    Create a point and select it.
+                </li>
+                <li>
+                    Go to <em class="guilabel">Presets</em> menu and you should see the presets option that you have just added.
+                </li>
+                <li>
+                    Click on it and you should see the form that will let you fill up the tags.
+                </li>
+            </ol>
+        </p>
+
+
+    </div>
+
+    <div id="footer">
+        <div class="tiny"><a href="http://hot.openstreetmap.org/" target="_blank"><img alt="HOT logo" src="img/hot-sml-logo.png" title="Humanitarian OpenStreetMap Team"></a>Copyright© 2015 Humanitarian OpenStreetMap Team  HOT Export Tool</div>
+    </div>
+
+</div>
+
+
+</body></html>
